@@ -72,7 +72,7 @@ early_mounts(void)
 
 	early_console("/dev/console");
 
-	mount("tmpfs", "/tmp", "tmpfs", MS_NOSUID | MS_NODEV | MS_NOATIME, "mode=01777");
+	mount("tmpfs", "/tmp", "tmpfs", MS_NOSUID | MS_NODEV | MS_NOATIME, "mode=01777,size=8M");
 	mkdir("/tmp/shm", 01777);
 
 	mkdir("/tmp/run", 0755);
